@@ -1,0 +1,127 @@
+{
+  "": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+  "id": "8c80e727-cd50-4dd9-8802-23468b548f87",
+  "name": "rl-scanner-cloud-task",
+  "friendlyName": "rl-scanner-cloud-task",
+  "description": "Use rl-scanner-cloud in a Azure DevOps extension via Azure Marketplace",
+  "helpMarkDown": "ReversingLabs Scanner Cloud",
+  "category": "Utility",
+  "author": "ReversingLabs",
+  "version": {
+    "Major": 1,
+    "Minor": 0,
+    "Patch": 5
+  },
+  "instanceNameFormat": "rl scanner cloud task",
+  "inputs": [
+    {
+      "name": "RLPORTAL_SERVER",
+      "type": "string",
+      "label": "RLPORTAL_SERVER",
+      "defaultValue": "_NOT_SPECIFIED_",
+      "required": true,
+      "helpMarkDown": "The required Portal Server"
+    },
+    {
+      "name": "RLPORTAL_ORG",
+      "type": "string",
+      "label": "RLPORTAL_ORG",
+      "defaultValue": "_NOT_SPECIFIED_",
+      "required": true,
+      "helpMarkDown": "The required Portal Organization"
+    },
+    {
+      "name": "RLPORTAL_GROUP",
+      "type": "string",
+      "label": "RLPORTAL_GROUP",
+      "defaultValue": "_NOT_SPECIFIED_",
+      "required": true,
+      "helpMarkDown": "The required Portal Group"
+    },
+    {
+      "name": "RL_PACKAGE_URL",
+      "type": "string",
+      "label": "RL_PACKAGE_URL",
+      "defaultValue": "_NOT_SPECIFIED_",
+      "required": true,
+      "helpMarkDown": "The required package url (PURL)"
+    },
+    {
+      "name": "MY_ARTIFACT_TO_SCAN",
+      "type": "string",
+      "label": "MY_ARTIFACT_TO_SCAN",
+      "defaultValue": "_NOT_SPECIFIED_",
+      "required": true,
+      "helpMarkDown": "The required artifact file name"
+    },
+    {
+      "name": "BUILD_PATH",
+      "type": "string",
+      "label": "BUILD_PATH",
+      "defaultValue": ".",
+      "required": false,
+      "helpMarkDown": "The build path where we can find the artifact"
+    },
+    {
+      "name": "REPORT_PATH",
+      "type": "string",
+      "label": "REPORT_PATH",
+      "defaultValue": "RlReport",
+      "required": false,
+      "helpMarkDown": "The path where report files will be stored, must be empty"
+    },
+    {
+      "name": "RL_VERBOSE",
+      "type": "string",
+      "label": "RL_VERBOSE",
+      "defaultValue": "0",
+      "required": false,
+      "helpMarkDown": "Run more verbose"
+    },
+    {
+      "name": "RL_DIFF_WITH",
+      "type": "string",
+      "label": "RL_DIFF_WITH",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Specify a version to do a diff scan"
+    },
+    {
+      "name": "RLSECURE_PROXY_SERVER",
+      "type": "string",
+      "label": "RLSECURE_PROXY_SERVER",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Use a proxy server to access the internet"
+    },
+    {
+      "name": "RLSECURE_PROXY_PORT",
+      "type": "string",
+      "label": "RLSECURE_PROXY_PORT",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "The port of the proxy server to access the internet"
+    },
+    {
+      "name": "RLSECURE_PROXY_USER",
+      "type": "string",
+      "label": "RLSECURE_PROXY_USER",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "If the proxy server requires authentication: specify the user name"
+    },
+    {
+      "name": "RLSECURE_PROXY_PASSWORD",
+      "type": "string",
+      "label": "RLSECURE_PROXY_PASSWORD",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "If the proxy server requires authentication: specify the user password"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "index.js"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+- group: rl-scanner-cloud
+- name: RLPORTAL_SERVER
+  value: test
+- name: RLPORTAL_ORG
+  value: Test
+- name: RLPORTAL_GROUP
+  value: Default
+- name: RL_PACKAGE_URL
+  value: testProject/testPackage@t1.0.0
+- name: BUILD_PATH
+  value: '.'
+- name: MY_ARTIFACT_TO_SCAN
+  value: 'README.md'
+  # value: 'eicarcom2.zip'
+- name: REPORT_PATH
+  value: 'report'
+
+steps:
+
+- task: rl-scanner-cloud-task@1
+  displayName: rl-scanner-cloud-task
+  inputs:
+    RLPORTAL_SERVER: $(RLPORTAL_SERVER)
+    RLPORTAL_ORG: $(RLPORTAL_ORG)
+    RLPORTAL_GROUP: $(RLPORTAL_GROUP)
+    RL_PACKAGE_URL: $(RL_PACKAGE_URL)
+    BUILD_PATH: $(BUILD_PATH)
+    MY_ARTIFACT_TO_SCAN: $(MY_ARTIFACT_TO_SCAN)
+    REPORT_PATH: $(REPORT_PATH)
+  env:
+    RLPORTAL_ACCESS_TOKEN: $(RLPORTAL_ACCESS_TOKEN)
+
