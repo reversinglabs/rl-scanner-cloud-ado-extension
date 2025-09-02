@@ -2,15 +2,15 @@
   "": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
   "id": "8c80e727-cd50-4dd9-8802-23468b548f87",
   "name": "rl-scanner-cloud-task",
-  "friendlyName": "ReversingLabs rl-scanner-cloud as a Azure DevOps extension",
-  "description": "ReversingLabs rl-scanner-cloud as a Azure DevOps extension",
+  "friendlyName":"ReversingLabs rl-scanner-cloud",
+  "description": "ReversingLabs rl-scanner-cloud as an Azure DevOps extension",
   "helpMarkDown": "ReversingLabs Scanner Cloud",
   "category": "Utility",
   "author": "ReversingLabs",
   "version": {
     "Major": 1,
     "Minor": 0,
-    "Patch": 11
+    "Patch": 12
   },
   "instanceNameFormat": "rl scanner cloud task",
   "inputs": [
@@ -120,7 +120,7 @@
     }
   ],
   "execution": {
-    "Node": {
+    "Node20_1": {
       "target": "index.js"
     }
   }

@@ -2,9 +2,9 @@
   "manifestVersion": 1,
   "publisher": "ReversingLabs",
   "id": "rl-scanner-cloud-task",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "name": "ReversingLabs rl-scanner-cloud-task",
-  "description": "ReversingLabs rl-scanner-cloud as a Azure DevOps extension",
+  "description": "ReversingLabs rl-scanner-cloud as an Azure DevOps extension",
   "public": true,
   "targets": [
     {

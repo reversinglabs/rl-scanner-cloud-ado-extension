@@ -137,6 +137,14 @@ The following paramaters **must** be passed via `inputs:`
 
 **Note:** All optional string parameters have a default empty string value and do not have to be specified if not used.
 
+The `REPORT_PATH` will now also hold the `RL-SAFE archive`.
+
+The [RL-SAFE archive](https://docs.secure.software/concepts/analysis-reports#rl-safe-archive)
+is a convenient way to get the full SAFE report and all other supported report formats for a software package in a single file.
+The archive can be freely shared and moved between different computers, and viewed without requiring a Spectra Assure product license.
+To open the archive and work with it, you need the [SAFE Viewer](https://docs.secure.software/safe-viewer) - a free, cross-platform tool developed by ReversingLabs.
+The RL-SAFE archive is named report.rl-safe and stored in `report-path`
+
 ## Examples
 
 ### Basic scan
@@ -255,5 +263,3 @@ The `rl-html` report format is currently not supported for this integration.
 - The official `reversinglabs/rl-scanner-cloud` Docker image [on Docker Hub](https://hub.docker.com/r/reversinglabs/rl-scanner-cloud)
 - [Supported file formats](https://docs.secure.software/concepts/filetypes) and [language coverage](https://docs.secure.software/concepts/language-coverage) for the Spectra Assure platform
 - Introduction to [secure software release processes](https://www.reversinglabs.com/solutions/secure-software-release-processes) with ReversingLabs
-
-
