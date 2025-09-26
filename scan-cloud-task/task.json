@@ -10,7 +10,7 @@
   "version": {
     "Major": 1,
     "Minor": 0,
-    "Patch": 12
+    "Patch": 13
   },
   "instanceNameFormat": "rl scanner cloud task",
   "inputs": [
@@ -77,6 +77,14 @@
       "defaultValue": "0",
       "required": false,
       "helpMarkDown": "Run more verbose"
+    },
+    {
+      "name": "RL_FORCE",
+      "type": "string",
+      "label": "RL_FORCE",
+      "defaultValue": "0",
+      "required": false,
+      "helpMarkDown": "Force a portal version by deleting the oldest version"
     },
     {
       "name": "RL_DIFF_WITH",

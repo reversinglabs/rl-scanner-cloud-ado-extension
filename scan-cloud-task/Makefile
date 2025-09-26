@@ -1,6 +1,13 @@
 
 all:
 	rm -f index.js
-	npx gts lint *.ts
+	npm install
+	npm update
+	-npm audit fix --force
+	npm ls
 	npx gts fix *.ts
+	npx gts lint *.ts
 	tsc
+	npm prune --omit=dev --json
+	-npm ls
+	ls -l *.js
